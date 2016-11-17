@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="app.hoocchi.perfectdemo.transition_demo.CircularRevealActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Circular Reveal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/text_light" />
+
+            <ImageView
+                android:id="@+id/title_ball"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/circle_ball_24dp"
+                android:tint="@color/theme_yellow_primary"
+                android:transitionName="@string/share_element_icon" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:id="@+id/reveal_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Sample Activity demonstrating how to create different CirculaReveal animations" />
+
+
+        <ImageView
+            android:id="@+id/ball_green"
+            style="@style/BallView"
+            android:layout_alignParentBottom="true"
+            android:tint="@color/ball_green" />
+
+        <ImageView
+            android:id="@+id/ball_red"
+            style="@style/BallView"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/ball_green"
+            android:tint="@color/ball_red" />
+
+        <ImageView
+            android:id="@+id/ball_blue"
+            style="@style/BallView"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/ball_red"
+            android:tint="@color/ball_blue" />
+
+        <ImageView
+            android:id="@+id/ball_yellow"
+            style="@style/BallView"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/ball_blue"
+            android:tint="@color/ball_yellow" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="text_light">#FFFFFF</color>
+    <color name="text_dark">#000000</color>
+    <color name="light_grey">#F5F5F5</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorDivider">#BDBDBD</color>
+
+    <color name="ball_red">#D32F2F</color>
+    <color name="ball_blue">#1976D2</color>
+    <color name="ball_green">#388E3C</color>
+    <color name="ball_yellow">#FBC02D</color>
+    <color name="ball_purple">#7B1FA2</color>
+
+    <!-- Transition Demo  -->
+    <color name="transition_demo_primary">#039BE5</color>
+    <color name="transition_demo_primary_dark">#0277BD</color>
+    <color name="transition_demo_primary_light">@color/light_grey</color>
+    <color name="transition_demo_accent">#3F51B5</color>
+    <color name="transition_demo_text">@color/colorPrimaryText</color>
+
+    <color name="theme_red_primary">#F44336</color>
+    <color name="theme_red_primary_dark">#D32F2F</color>
+    <color name="theme_red_primary_light">#FFCDD2</color>
+    <color name="theme_red_accent">#FF5722</color>
+    <color name="theme_red_text">@color/colorPrimaryText</color>
+
+    <color name="theme_blue_primary">#2196F3</color>
+    <color name="theme_blue_primary_dark">#1976D2</color>
+    <color name="theme_blue_primary_light">#BBDEFB</color>
+    <color name="theme_blue_accent">#FF4081</color>
+    <color name="theme_blue_text">@color/colorPrimaryText</color>
+
+    <color name="theme_green_primary">#4CAF50</color>
+    <color name="theme_green_primary_dark">#388E3C</color>
+    <color name="theme_green_primary_light">#C8E6C9</color>
+    <color name="theme_green_accent">#8BC34A</color>
+    <color name="theme_green_text">@color/colorPrimaryText</color>
+
+    <color name="theme_yellow_primary">#FFEB3B</color>
+    <color name="theme_yellow_primary_dark">#FBC02D</color>
+    <color name="theme_yellow_primary_light">#FFF9C4</color>
+    <color name="theme_yellow_accent">#FFC107</color>
+    <color name="theme_yellow_text">@color/colorPrimaryText</color>
+
+    <color name="theme_purple_primary">#9C27B0</color>
+    <color name="theme_purple_primary_dark">#7B1FA2</color>
+    <color name="theme_purple_primary_light">#E1BEE7</color>
+    <color name="theme_purple_accent">#E040FB</color>
+    <color name="theme_purple_text">@color/colorPrimaryText</color>
+
+
+
+</resources>

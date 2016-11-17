@@ -1,0 +1,103 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!-- TransitionDemo Theme-->
+    <style name="TransitionDemoTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/transition_demo_primary</item>
+        <item name="colorPrimaryDark">@color/transition_demo_primary_dark</item>
+        <item name="colorAccent">@color/transition_demo_accent</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:statusBarColor">@color/transition_demo_primary_dark</item>
+        <item name="android:windowBackground">@color/transition_demo_primary_light</item>
+
+        <!-- 是否允许内容切换时使用动画 -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <!-- 是否运行Enter、Return动画覆盖Exit、Reenter动画 -->
+        <item name="android:windowAllowEnterTransitionOverlap">false</item>
+        <item name="android:windowAllowReturnTransitionOverlap">false</item>
+    </style>
+
+    <style name="TransitionDemoTheme.Red" parent="TransitionDemoTheme">
+        <item name="colorPrimary">@color/theme_red_primary</item>
+        <item name="colorPrimaryDark">@color/theme_red_primary_dark</item>
+        <item name="colorAccent">@color/theme_red_accent</item>
+        <item name="android:textColor">@color/theme_red_text</item>
+        <item name="android:statusBarColor">@color/theme_red_primary_dark</item>
+        <item name="android:windowBackground">@color/theme_red_primary_light</item>
+    </style>
+
+    <style name="TransitionDemoTheme.Blue" parent="TransitionDemoTheme">
+        <item name="colorPrimary">@color/theme_blue_primary</item>
+        <item name="colorPrimaryDark">@color/theme_blue_primary_dark</item>
+        <item name="colorAccent">@color/theme_blue_accent</item>
+        <item name="android:textColor">@color/theme_blue_text</item>
+        <item name="android:statusBarColor">@color/theme_blue_primary_dark</item>
+        <item name="android:windowBackground">@color/theme_blue_primary_light</item>
+    </style>
+
+    <style name="TransitionDemoTheme.Green" parent="TransitionDemoTheme">
+        <item name="colorPrimary">@color/theme_green_primary</item>
+        <item name="colorPrimaryDark">@color/theme_green_primary_dark</item>
+        <item name="colorAccent">@color/theme_green_accent</item>
+        <item name="android:textColor">@color/theme_green_text</item>
+        <item name="android:statusBarColor">@color/theme_green_primary_dark</item>
+        <item name="android:windowBackground">@color/theme_green_primary_light</item>
+    </style>
+
+    <style name="TransitionDemoTheme.Yellow" parent="TransitionDemoTheme">
+        <item name="colorPrimary">@color/theme_yellow_primary</item>
+        <item name="colorPrimaryDark">@color/theme_yellow_primary_dark</item>
+        <item name="colorAccent">@color/theme_yellow_accent</item>
+        <item name="android:textColor">@color/theme_yellow_text</item>
+        <item name="android:statusBarColor">@color/theme_yellow_primary_dark</item>
+        <item name="android:windowBackground">@color/theme_yellow_primary_light</item>
+    </style>
+
+    <style name="TransitionDemoTheme.Purple" parent="TransitionDemoTheme">
+        <item name="colorPrimary">@color/theme_purple_primary</item>
+        <item name="colorPrimaryDark">@color/theme_purple_primary_dark</item>
+        <item name="colorAccent">@color/theme_purple_accent</item>
+        <item name="android:textColor">@color/theme_purple_text</item>
+        <item name="android:statusBarColor">@color/theme_purple_primary_dark</item>
+        <item name="android:windowBackground">@color/theme_purple_primary_light</item>
+    </style>
+
+    <style name="CommonText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TitleText" parent="CommonText">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+    </style>
+
+    <style name="BodyText" parent="CommonText">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+    </style>
+
+    <style name="BallView">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:src">@drawable/circle_ball_24dp</item>
+    </style>
+
+    <style name="BigBallView">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:src">@drawable/circle_ball_24dp</item>
+    </style>
+
+</resources>

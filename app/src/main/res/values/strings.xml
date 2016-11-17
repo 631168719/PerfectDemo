@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PerfectDemo</string>
+
+    <string name="share_element_icon">share_element_icon</string>
+    <string name="share_element_title">share_element_title</string>
+
+    <string name="transition1_notice">
+        Content Transition实现原理:通过捕获View的起始和结束Visibility，然后进行Animator动画完成的。
+        Visibility的三个实现类: Fade 、Slide 、Explode。
+        Fade(淡入淡出)、Slide(滑动)、Explode(爆炸)动画可以通过代码或者加载XML文件来实现。
+    </string>
+    <string name="transition1_test">
+        这是一段测试文字，便于观察动画效果。这是一段测试文字，便于观察动画效果。
+         这是一段测试文字，便于观察动画效果。 这是一段测试文字，便于观察动画效果。
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
