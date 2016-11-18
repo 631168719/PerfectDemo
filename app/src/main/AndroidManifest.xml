@@ -41,7 +41,8 @@
 
 
         <!-- Material Demo-->
-        <activity android:name=".material_demo.MaterialMainActivity"></activity>
+        <activity android:name=".material_demo.MaterialMainActivity"
+            android:theme="@style/MaterialDemoTheme"/>
     </application>
 
 </manifest>
