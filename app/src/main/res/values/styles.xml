@@ -105,6 +105,8 @@
     <style name="MaterialDemoTheme" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <!-- 该属性是为TextInputLayout设置，否则使用CounterMaxLength时会报错 -->
+        <item name="textColorError">@color/design_textinput_error_color_light</item>
     </style>
 
 </resources>
