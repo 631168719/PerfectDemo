@@ -3,6 +3,7 @@ package app.hoocchi.perfectdemo.material_demo;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -20,6 +21,7 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.AccelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -116,7 +118,7 @@ public class TabTwoFragment extends Fragment {
                 if (checkInput()) {
                     login();
                 } else {
-                    Snackbar.make(mCardView, "登录失败", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(mCardView, "请输入对应的信息", Snackbar.LENGTH_SHORT).show();
                 }
             }
         });
@@ -152,44 +154,49 @@ public class TabTwoFragment extends Fragment {
 
     private void animatePreLolipop(boolean isBackLogin) {
         if(isBackLogin){
-            mCardView.animate()
-                    .alpha(1f)
-                    .setListener(new AnimatorListenerAdapter() {
-                        @Override
-                        public void onAnimationEnd(Animator animation) {
-                            super.onAnimationEnd(animation);
-                            mCardView.setCardBackgroundColor(ContextCompat.getColor(getActivity(), R.color.text_light));
-                            mLoginText.setVisibility(View.INVISIBLE);
-                            mInputLayout.setVisibility(View.VISIBLE);
-                            mFab.animate()
-                                    .alpha(1f)
-                                    .scaleX(1f)
-                                    .scaleY(1f)
-                                    .start();
-                        }
-                    })
-                    .start();
-        }else{
-            mFab.animate()
-                    .alpha(1f)
-                    .scaleX(1f)
-                    .scaleY(1f)
-                    .setListener(new AnimatorListenerAdapter() {
-                        @Override
-                        public void onAnimationEnd(Animator animation) {
-                            super.onAnimationEnd(animation);
-                            mCardView.setAlpha(0f);
-                            mCardView.setCardBackgroundColor(ContextCompat.getColor(getActivity(), R.color.colorAccent));
-                            mInputLayout.setVisibility(View.INVISIBLE);
-                            mLoginText.setVisibility(View.VISIBLE);
+           mLoginText.animate()
+                   .alpha(0f)
+                   .scaleY(0f)
+                   .scaleY(0f)
+                   .setDuration(300)
+                   .setListener(new AnimatorListenerAdapter() {
+                       @Override
+                       public void onAnimationEnd(Animator animation) {
+                           mFab.animate()
+                                   .alpha(1f)
+                                   .scaleX(1f)
+                                   .scaleY(1f)
+                                   .setListener(null)
+                                   .setInterpolator(new AccelerateInterpolator())
+                                   .start();
 
-                            mCardView.animate()
-                                    .alpha(1f)
-                                    .setInterpolator(new AccelerateDecelerateInterpolator())
-                                    .start();
-                        }
-                    })
-                    .start();
+                           mCardView.setCardBackgroundColor(Color.WHITE);
+                           mInputLayout.setVisibility(View.VISIBLE);
+                           mLoginText.setVisibility(View.INVISIBLE);
+                           mLoginText.setAlpha(1f);
+                           mLoginText.setScaleX(1f);
+                           mLoginText.setScaleY(1f);
+                       }
+                   })
+                   .start();
+        }else{
+           mFab.animate()
+                   .alpha(0f)
+                   .scaleX(0f)
+                   .scaleY(0f)
+                   .setStartDelay(100)
+                   .setListener(new AnimatorListenerAdapter() {
+                       @Override
+                       public void onAnimationEnd(Animator animation) {
+                           mCardView.setCardBackgroundColor(ContextCompat.getColor(
+                                   getActivity() , R.color.colorAccent
+                           ));
+
+                           mInputLayout.setVisibility(View.INVISIBLE);
+                           mLoginText.setVisibility(View.VISIBLE);
+                       }
+                   })
+                   .start();
         }
     }
 
@@ -213,6 +220,7 @@ public class TabTwoFragment extends Fragment {
         Animator animator = ViewAnimationUtils.createCircularReveal(mCardView, cx, cy, startRadius, endRadius);
 
         if (isBackLogin) {
+            animator.setInterpolator(new AccelerateDecelerateInterpolator());
             animator.addListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {

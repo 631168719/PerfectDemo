@@ -58,7 +58,7 @@ public class MaterialDemo2Fragment extends Fragment {
     }
 
     private void initViews(View view) {
-        mToolBar = (Toolbar) view.findViewById(R.id.toolbar_layout);
+        mToolBar = (Toolbar) view.findViewById(R.id.tool_bar);
 
         ((MaterialMainActivity)getActivity()).setSupportActionBar(mToolBar);
         mToolBar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -72,7 +72,7 @@ public class MaterialDemo2Fragment extends Fragment {
         List<Fragment> fragments = new ArrayList<>();
         fragments.add(TabOneFragment.newInstance());
         fragments.add(TabTwoFragment.newInstance());
-        fragments.add(TabOneFragment.newInstance());
+        fragments.add(TabThreeFragment.newInstance());
         mViewPager.setAdapter(new TabPagerAdapter(getActivity().getSupportFragmentManager() , fragments));
 
         mTabLayout = (TabLayout) view.findViewById(R.id.tab_layout);

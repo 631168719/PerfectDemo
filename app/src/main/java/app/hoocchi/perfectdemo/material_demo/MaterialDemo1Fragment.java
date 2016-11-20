@@ -64,7 +64,7 @@ public class MaterialDemo1Fragment extends Fragment {
 
     private void initViews(View view) {
         mCoordinatorLayout = (CoordinatorLayout) view.findViewById(R.id.coordinator_layout);
-        mToolBar = (Toolbar) view.findViewById(R.id.toolbar_layout);
+        mToolBar = (Toolbar) view.findViewById(R.id.tool_bar);
 
 
         //因为Theme是NoActionBar的，所以需要手动设置ActionBar，否则不显示OptionMenu

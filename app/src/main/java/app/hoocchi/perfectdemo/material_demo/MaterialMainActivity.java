@@ -59,6 +59,7 @@ public class MaterialMainActivity extends AppCompatActivity {
                         break;
                     case R.id.demo_item_three:
                         mNavigationView.setCheckedItem(id);
+                        replaceContainer(MaterialDemo3Fragment.newInstance());
                         break;
                     case R.id.menu_item_settings:
                         break;
@@ -104,4 +105,5 @@ public class MaterialMainActivity extends AppCompatActivity {
                 .replace(R.id.content_container, fragment)
                 .commit();
     }
+
 }

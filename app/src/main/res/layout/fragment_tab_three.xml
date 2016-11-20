@@ -1,0 +1,59 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context="app.hoocchi.perfectdemo.material_demo.TabThreeFragment">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="start"
+            android:text="BottomSheet Demo :"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <Button
+            android:id="@+id/btn_behavior"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:text="BottomSheetBehavior" />
+
+        <Button
+            android:id="@+id/btn_dialog"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:inputType="textCapWords"
+            android:text="BottomSheetDialog" />
+
+        <Button
+            android:id="@+id/btn_fragment"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:text="BottomSheetFragment" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottom_sheet_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <include
+            layout="@layout/bottom_sheet_dialog_content" />
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -13,7 +13,7 @@
         app:expanded="true">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar_layout"
+            android:id="@+id/tool_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
