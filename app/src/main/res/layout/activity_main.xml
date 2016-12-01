@@ -9,17 +9,18 @@
     tools:context="app.hoocchi.perfectdemo.MainActivity">
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        style="@style/CommonButton"
         android:text="Transition Demo"
-        android:inputType="textCapWords"
         android:onClick="showTransitionDemo"/>
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        style="@style/CommonButton"
         android:text="Material Demo"
-        android:inputType="textCapWords"
         android:onClick="showMaterialDemo"/>
+
+    <Button
+        style="@style/CommonButton"
+        android:text="Preference Demo"
+        android:onClick="showPreferenceDemo"/>
 
 </LinearLayout>

@@ -39,10 +39,12 @@
             android:name=".transition_demo.CustomTransitionActivity"
             android:theme="@style/TransitionDemoTheme.Purple" />
 
-
-        <!-- Material Demo-->
-        <activity android:name=".material_demo.MaterialMainActivity"
-            android:theme="@style/MaterialDemoTheme"/>
+        <!-- Material Demo -->
+        <activity
+            android:name=".material_demo.MaterialMainActivity"
+            android:theme="@style/MaterialDemoTheme" />
+        <activity android:name=".preference_demo.PreferenceMainActivity" />
+        <activity android:name=".preference_demo.PreferenceActivity1"></activity>
     </application>
 
 </manifest>

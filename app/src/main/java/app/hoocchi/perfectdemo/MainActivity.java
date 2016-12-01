@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import app.hoocchi.perfectdemo.material_demo.MaterialMainActivity;
+import app.hoocchi.perfectdemo.preference_demo.PreferenceMainActivity;
 import app.hoocchi.perfectdemo.transition_demo.TransitionMainActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,5 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void showMaterialDemo(View v){
         goActivity(MaterialMainActivity.class);
+    }
+
+    public void showPreferenceDemo(View vi){
+        goActivity(PreferenceMainActivity.class);
     }
 }

@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">PerfectDemo</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="share_element_icon">share_element_icon</string>
     <string name="share_element_title">share_element_title</string>
 
@@ -14,6 +17,19 @@
          这是一段测试文字，便于观察动画效果。 这是一段测试文字，便于观察动画效果。
     </string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+   <string name="two_state_preference">Two State Preference</string>
+   <string name="dialog_preference">Dialog Preference</string>
+   <string name="ringtone_preference">Ringtone Preference</string>
+    <string name="intent_preference">Intent Preference</string>
+    <string name="depencies_preference">Depency Preference</string>
+
+    <string name="checkbox_key">checkbox_prefs</string>
+    <string name="switch_key">switch_prefs</string>
+    <string name="edittext_key">edittext_prefs</string>
+    <string name="list_key">list_prefs</string>
+    <string name="multi_list_key">multi_list_prefs</string>
+    <string name="parent_key">parent_prefs</string>
+    <string name="child_key">child_prefs</string>
+
+    
 </resources>
