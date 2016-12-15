@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="基本设置">
+
+        <SwitchPreference
+            android:key="key_decrease_gprs"
+            android:summary="仅在Wi-Fi环境下才会自动加载图片"
+            android:title="省流量模式"/>
+
+        <SwitchPreference
+            android:key="key_shake_fankui"
+            android:summary="遇到问题？摇一摇手机就能反馈~"
+            android:title="摇动发送反馈"/>
+
+        <PreferenceScreen
+            android:title="字体大小">
+
+            <intent
+                android:targetPackage="app.hoocchi.perfectdemo"
+                android:targetClass="app.hoocchi.perfectdemo.preference_demo.PreferenceActivity1"/>
+
+        </PreferenceScreen>
+
+        <Preference
+            android:key="key_change_theme"
+            android:title="自动切换主题"/>
+
+
+        <Preference
+            android:key="key_clear_cache"
+            android:summary="包括图片、音频缓存（共250KB）"
+            android:title="清楚缓存"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="通知设置">
+
+        <Preference
+            android:summary="会影响到客户端和网页版"
+            android:title="全局消息和邮件"/>
+
+        <Preference
+            android:summary="只影响客户端的通知推送"
+            android:title="推送消息设置"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="帐号设置">
+
+        <Preference
+            android:summary="修改帐号密码，绑定社交帐号"
+            android:title="帐号和密码"/>
+
+        <Preference
+            android:summary="管理黑名单"
+            android:title="黑名单"/>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

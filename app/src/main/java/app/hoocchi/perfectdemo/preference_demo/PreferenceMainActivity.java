@@ -13,6 +13,7 @@ public class PreferenceMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preference_main);
+        getSupportActionBar().setTitle("Preference Demo");
     }
 
     public void showPreferenceFromXML(View v){
@@ -25,5 +26,9 @@ public class PreferenceMainActivity extends AppCompatActivity {
         Intent i = new Intent(this , PreferenceActivity1.class);
         i.putExtra(PreferenceActivity1.TYPE , PreferenceActivity1.TYPE_CODE);
         startActivity(i);
+    }
+
+    public void showPreferenceFragment(View v){
+        startActivity(new Intent(this , PreferenceActivity2.class));
     }
 }

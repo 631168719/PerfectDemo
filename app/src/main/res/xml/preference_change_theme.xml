@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:key="key_close_theme"
+        android:title="关闭"/>
+
+    <PreferenceCategory
+        android:title="切换的时间"
+        android:dependency="key_close_theme">
+
+        <Preference
+            android:key="key_night_mode"
+            android:title="夜间模式开始时间"
+            android:summary="17:00"/>
+
+        <Preference
+            android:key="key_day_mode"
+            android:title="日间模式开始时间"
+            android:summary="07:00"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>
