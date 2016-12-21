@@ -44,11 +44,22 @@
             android:name=".material_demo.MaterialMainActivity"
             android:theme="@style/MaterialDemoTheme"/>
 
-        <!-- Preference Demo-->
+        <!-- Preference Demo -->
         <activity android:name=".preference_demo.PreferenceMainActivity"/>
         <activity android:name=".preference_demo.PreferenceActivity1"/>
-        <activity android:name=".preference_demo.PreferenceActivity2"
+        <activity
+            android:name=".preference_demo.PreferenceActivity2"
             android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".statusbar_demo.StatusBarActivity">
+        </activity>
+        <activity
+            android:name=".statusbar_demo.DrawerLayoutActivity"
+            android:theme="@style/DrawerLayoutTheme">
+        </activity>
+        <activity android:name=".statusbar_demo.StatusBarTranslucentActivity"
+                  android:theme="@style/AppTheme.NoActionBar"
+            >
         </activity>
     </application>
 

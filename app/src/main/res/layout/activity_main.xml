@@ -23,4 +23,9 @@
         android:text="Preference Demo"
         android:onClick="showPreferenceDemo"/>
 
+    <Button
+        style="@style/CommonButton"
+        android:onClick="showStatusBareDemo"
+        android:text="StatusBar Demo"/>
+
 </LinearLayout>
