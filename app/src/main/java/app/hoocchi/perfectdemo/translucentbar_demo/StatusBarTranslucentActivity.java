@@ -1,4 +1,4 @@
-package app.hoocchi.perfectdemo.statusbar_demo;
+package app.hoocchi.perfectdemo.translucentbar_demo;
 
 import android.graphics.Color;
 import android.os.Build;

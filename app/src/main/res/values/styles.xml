@@ -120,6 +120,12 @@
     </style>
 
 
+    <!-- TranslucentBar Demo -->
+    <style name="TranslucentOnKitKatTheme" parent="AppTheme.NoActionBar">
+        <!-- 使用代码实现时该属性可以注释-->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
     <style name="DrawerLayoutTheme" parent="AppTheme.NoActionBar">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
@@ -132,5 +138,7 @@
         <item name="android:statusBarColor">#ffffffff</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
+
+
 
 </resources>

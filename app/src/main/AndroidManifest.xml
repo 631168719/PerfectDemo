@@ -51,16 +51,21 @@
             android:name=".preference_demo.PreferenceActivity2"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".statusbar_demo.StatusBarActivity">
+
+
+        <!-- TranslucentBar Demo -->
+        <activity android:name=".translucentbar_demo.TranslucentBarMainActivity"/>
+        <activity android:name=".translucentbar_demo.TranslucentBarOnKitKat"/>
+
+        <activity
+            android:name=".translucentbar_demo.TranslucentBarOnDrawerLayout"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".statusbar_demo.DrawerLayoutActivity"
-            android:theme="@style/DrawerLayoutTheme">
+            android:name=".translucentbar_demo.StatusBarTranslucentActivity"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".statusbar_demo.StatusBarTranslucentActivity"
-                  android:theme="@style/AppTheme.NoActionBar"
-            >
-        </activity>
+
     </application>
 
 </manifest>

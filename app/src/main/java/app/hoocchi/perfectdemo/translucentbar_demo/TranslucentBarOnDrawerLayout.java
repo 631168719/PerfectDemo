@@ -1,4 +1,4 @@
-package app.hoocchi.perfectdemo.statusbar_demo;
+package app.hoocchi.perfectdemo.translucentbar_demo;
 
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
@@ -6,15 +6,17 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.WindowManager;
 
 import app.hoocchi.perfectdemo.R;
 
-public class DrawerLayoutActivity extends AppCompatActivity {
+public class TranslucentBarOnDrawerLayout extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drawer_layout);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        setContentView(R.layout.activity_translucent_bar_on_drawerlayout);
 
         /**
          * 实现DrawerLayout的内容延伸至StatusBar的方法 : (5.0+)

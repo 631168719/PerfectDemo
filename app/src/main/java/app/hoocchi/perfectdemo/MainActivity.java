@@ -7,7 +7,7 @@ import android.view.View;
 
 import app.hoocchi.perfectdemo.material_demo.MaterialMainActivity;
 import app.hoocchi.perfectdemo.preference_demo.PreferenceMainActivity;
-import app.hoocchi.perfectdemo.statusbar_demo.StatusBarActivity;
+import app.hoocchi.perfectdemo.translucentbar_demo.TranslucentBarMainActivity;
 import app.hoocchi.perfectdemo.transition_demo.TransitionMainActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,6 +35,6 @@ public class MainActivity extends AppCompatActivity {
         goActivity(PreferenceMainActivity.class);
 
     }public void showStatusBareDemo(View vi){
-        goActivity(StatusBarActivity.class);
+        goActivity(TranslucentBarMainActivity.class);
     }
 }

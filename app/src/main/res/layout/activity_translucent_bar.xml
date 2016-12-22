@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".translucentbar_demo.TranslucentBarMainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showTranslucentBarOnKitKatByCode"
+        android:text="透明状态栏（KitKat By Code）"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showTranslucentBarOnKitKatByStyle"
+        android:text="透明状态栏（KitKat By Style）"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showTranslucentBarOnLolipopByCode"
+        android:text="透明状态栏（Lolipop By Code）"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showTranslucentBarOnLolipopByStyle"
+        android:text="透明状态栏（Lolipop By Style）"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showTranslucentBarOnKitKatDrawer"
+        android:text="透明状态栏（On KitKat's Drawer）"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showTranslucentBarOnLolipopDrawer"
+        android:text="透明状态栏（On LoliPop's Drawer）"/>
+
+</LinearLayout>
