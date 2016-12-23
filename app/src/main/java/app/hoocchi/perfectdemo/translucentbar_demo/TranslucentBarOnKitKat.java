@@ -155,7 +155,7 @@ public class TranslucentBarOnKitKat extends AppCompatActivity {
         ViewGroup contentView = (ViewGroup) findViewById(R.id.content_view);
         contentView.setFitsSystemWindows(true);
         //与上面效果一样
-        contentView.setPadding(0,getStatusBarHeight() , 0 ,0);
+//        contentView.setPadding(0,getStatusBarHeight() , 0 ,0);
     }
 
     /**

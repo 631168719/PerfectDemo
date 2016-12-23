@@ -2,6 +2,8 @@ package app.hoocchi.perfectdemo.translucentbar_demo;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 
 import app.hoocchi.perfectdemo.DialogManager;
@@ -25,25 +27,18 @@ public class TranslucentBarOnLolipopDrawer extends AppCompatActivity {
             return ;
         }
 
-        setContentView(R.layout.activity_translucent_bar_on_lolipop_drawer);
+
+        setTranslucentBar();
     }
 
+    private void setTranslucentBar() {
+        setTheme(R.style.LolipopDrawerTheme);
+        setContentView(R.layout.activity_translucent_bar_on_kitkat_drawer);
 
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerLayout.setFitsSystemWindows(true);
 
-    /**
-     * 实现DrawerLayout的内容延伸至StatusBar的方法 : (5.0+)
-     *
-     * 1. 给布局中的DrawerLayout以及NavigationView添加android:fitSystemWindows="true"
-     * 2. 给当前Activity设置如下主题 :
-     *
-     *  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-     *    <item name="colorPrimary">@color/colorPrimary</item>
-     *    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-     *    <item name="colorAccent">@color/colorAccent</item>
-     *
-     *    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-     *    <item name="android:statusBarColor">@android:color/transparent</item>
-     *  </style>
-     *
-     */
+        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
+        navigationView.setFitsSystemWindows(true);
+    }
 }

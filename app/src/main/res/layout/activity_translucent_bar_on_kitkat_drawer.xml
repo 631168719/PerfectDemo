@@ -58,14 +58,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
                 android:text="3.  为了让Drawerlayout的内容延伸至状态栏必须给根View或内容View设置fitsSystemWindows属性。"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
                 android:hint="测试透明状态栏对键盘输入时的影响" />
 
         </LinearLayout>
