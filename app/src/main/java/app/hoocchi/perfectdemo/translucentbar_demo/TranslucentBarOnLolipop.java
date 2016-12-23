@@ -122,14 +122,14 @@ public class TranslucentBarOnLolipop extends AppCompatActivity {
     private void useMethodOne(){
         ViewGroup rootView = (ViewGroup) findViewById(R.id.root_view);
         rootView.setFitsSystemWindows(true);
-        getWindow().setStatusBarColor(Color.parseColor("#123654"));
-        //与上面效果一样
-//        rootView.setPadding(0 , getStatusBarHeight() , 0 , 0);
-//        rootView.setBackgroundColor(Color.parseColor("#123654"));
-//
-//        ViewGroup overlayView = (ViewGroup) findViewById(R.id.overlay_view);
-//        overlayView.setVisibility(View.VISIBLE);
-//        overlayView.setBackgroundColor(Color.WHITE);
+//        getWindow().setStatusBarColor(Color.parseColor("#123654"));
+//        与上面效果一样
+        rootView.setPadding(0 , getStatusBarHeight() , 0 , 0);
+        rootView.setBackgroundColor(Color.parseColor("#123654"));
+
+        ViewGroup overlayView = (ViewGroup) findViewById(R.id.overlay_view);
+        overlayView.setVisibility(View.VISIBLE);
+        overlayView.setBackgroundColor(Color.WHITE);
     }
 
     /**
