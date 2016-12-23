@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import app.hoocchi.perfectdemo.DataUtils;
+import app.hoocchi.perfectdemo.DataCenter;
 import app.hoocchi.perfectdemo.R;
 
 /**
@@ -66,6 +66,6 @@ public class TabOneFragment extends Fragment {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        mRecyclerView.setAdapter(new RecyclerAdapter(DataUtils.mStrArrays));
+        mRecyclerView.setAdapter(new RecyclerAdapter(DataCenter.mStrArrays));
     }
 }

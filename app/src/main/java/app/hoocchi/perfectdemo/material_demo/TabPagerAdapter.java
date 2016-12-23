@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import java.util.List;
 
-import app.hoocchi.perfectdemo.DataUtils;
+import app.hoocchi.perfectdemo.DataCenter;
 
 /**
  * Created by st on 2016/11/18.
@@ -36,6 +36,6 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return DataUtils.mTabTitles[position%DataUtils.mTabTitles.length];
+        return DataCenter.mTabTitles[position% DataCenter.mTabTitles.length];
     }
 }

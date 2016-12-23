@@ -5,7 +5,8 @@
     android:layout_height="200dp"
     android:background="@drawable/main_nav_header_bg"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/header_view">
 
 
     <ImageView
@@ -15,6 +16,7 @@
         android:src="@drawable/logo" />
 
     <TextView
+        android:id="@+id/header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

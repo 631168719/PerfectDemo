@@ -12,26 +12,14 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="showTranslucentBarOnKitKatByCode"
-        android:text="透明状态栏（KitKat By Code）"/>
+        android:onClick="showTranslucentBarOnKitKat"
+        android:text="透明状态栏（KitKat）"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="showTranslucentBarOnKitKatByStyle"
-        android:text="透明状态栏（KitKat By Style）"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="showTranslucentBarOnLolipopByCode"
-        android:text="透明状态栏（Lolipop By Code）"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="showTranslucentBarOnLolipopByStyle"
-        android:text="透明状态栏（Lolipop By Style）"/>
+        android:onClick="showTranslucentBarOnLolipop"
+        android:text="透明状态栏（Lolipop）"/>
 
     <Button
         android:layout_width="match_parent"

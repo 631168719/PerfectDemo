@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="app.hoocchi.perfectdemo">
+    package="app.hoocchi.perfectdemo">
 
     <application
         android:allowBackup="true"
@@ -10,62 +10,53 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <!-- Transition Demo -->
         <activity
             android:name=".transition_demo.TransitionMainActivity"
-            android:theme="@style/TransitionDemoTheme"/>
+            android:theme="@style/TransitionDemoTheme" />
         <activity
             android:name=".transition_demo.TransitionActivity1"
-            android:theme="@style/TransitionDemoTheme.Red"/>
+            android:theme="@style/TransitionDemoTheme.Red" />
         <activity
             android:name=".transition_demo.TransitionActivity2"
-            android:theme="@style/TransitionDemoTheme.Red"/>
+            android:theme="@style/TransitionDemoTheme.Red" />
         <activity
             android:name=".transition_demo.ShareElementActivity"
-            android:theme="@style/TransitionDemoTheme.Blue"/>
+            android:theme="@style/TransitionDemoTheme.Blue" />
         <activity
             android:name=".transition_demo.SceneAnimationActivity"
-            android:theme="@style/TransitionDemoTheme.Green"/>
+            android:theme="@style/TransitionDemoTheme.Green" />
         <activity
             android:name=".transition_demo.CircularRevealActivity"
-            android:theme="@style/TransitionDemoTheme.Yellow"/>
+            android:theme="@style/TransitionDemoTheme.Yellow" />
         <activity
             android:name=".transition_demo.CustomTransitionActivity"
-            android:theme="@style/TransitionDemoTheme.Purple"/>
+            android:theme="@style/TransitionDemoTheme.Purple" />
 
         <!-- Material Demo -->
         <activity
             android:name=".material_demo.MaterialMainActivity"
-            android:theme="@style/MaterialDemoTheme"/>
+            android:theme="@style/MaterialDemoTheme" />
 
         <!-- Preference Demo -->
-        <activity android:name=".preference_demo.PreferenceMainActivity"/>
-        <activity android:name=".preference_demo.PreferenceActivity1"/>
+        <activity android:name=".preference_demo.PreferenceMainActivity" />
+        <activity android:name=".preference_demo.PreferenceActivity1" />
         <activity
             android:name=".preference_demo.PreferenceActivity2"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- TranslucentBar Demo -->
-        <activity android:name=".translucentbar_demo.TranslucentBarMainActivity"/>
-        <activity android:name=".translucentbar_demo.TranslucentBarOnKitKat"/>
-
-        <activity
-            android:name=".translucentbar_demo.TranslucentBarOnDrawerLayout"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".translucentbar_demo.StatusBarTranslucentActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
+        <activity android:name=".translucentbar_demo.TranslucentBarMainActivity" />
+        <activity android:name=".translucentbar_demo.TranslucentBarOnKitKat" />
+        <activity android:name=".translucentbar_demo.TranslucentBarOnKitKatDrawer" />
+        <activity android:name=".translucentbar_demo.TranslucentBarOnLolipop" />
+        <activity android:name=".translucentbar_demo.TranslucentBarOnLolipopDrawer"/>
     </application>
 
 </manifest>

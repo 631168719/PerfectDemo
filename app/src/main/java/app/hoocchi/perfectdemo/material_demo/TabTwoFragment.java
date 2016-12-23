@@ -4,7 +4,6 @@ package app.hoocchi.perfectdemo.material_demo;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -26,6 +25,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import app.hoocchi.perfectdemo.R;
+import app.hoocchi.perfectdemo.VersionManager;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -137,7 +137,7 @@ public class TabTwoFragment extends Fragment {
     }
 
     private void backLoginUI() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (VersionManager.isHigherLolipop()) {
             animateAfterLolipop(true);
         } else {
             animatePreLolipop(true);
@@ -145,7 +145,7 @@ public class TabTwoFragment extends Fragment {
     }
 
     private void login() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (VersionManager.isHigherLolipop()) {
             animateAfterLolipop(false);
         } else {
             animatePreLolipop(false);

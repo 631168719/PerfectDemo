@@ -12,6 +12,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.transition.Slide;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +23,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.hoocchi.perfectdemo.DialogManager;
 import app.hoocchi.perfectdemo.R;
+import app.hoocchi.perfectdemo.VersionManager;
 
 public class TransitionMainActivity extends TransitionBaseActivity {
 
@@ -31,25 +34,20 @@ public class TransitionMainActivity extends TransitionBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transition_main);
 
-        checkVersion();
-
-        setupToolBar("Transition Demo");
-        setupWindowTransition();
-        setupLayout();
-    }
-
-    private void checkVersion(){
-        if(Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP){
-            new AlertDialog.Builder(this)
-                    .setMessage("Transition Demo只能在Android 5.0+的手机上运行噢！")
-                    .setPositiveButton("哦，知道了", new DialogInterface.OnClickListener() {
+        if(VersionManager.isLowerLolipop()){
+            DialogManager.showAlertDialog(this, "Transition Demo只能在Android 5.0+的手机上运行噢！",
+                    new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             finish();
                         }
-                    })
-                    .show();
+                    });
+            return ;
         }
+
+        setupToolBar("Transition Demo");
+        setupWindowTransition();
+        setupLayout();
     }
 
     private void setupWindowTransition() {

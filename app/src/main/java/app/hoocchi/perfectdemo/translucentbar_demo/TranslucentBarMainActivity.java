@@ -16,36 +16,21 @@ public class TranslucentBarMainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("StatusBar Demo");
     }
 
-    public void showTranslucentBarOnKitKatByCode(View v){
-        Intent intent = new Intent(this , TranslucentBarOnKitKat.class);
-        intent.putExtra(TranslucentBarOnKitKat.TYPE , TranslucentBarOnKitKat.TYPE_CODE);
-        startActivity(intent);
+    public void showTranslucentBarOnKitKat(View v){
+        startActivity(new Intent(this , TranslucentBarOnKitKat.class));
     }
 
-    public void showTranslucentBarOnKitKatByStyle(View v) {
-        Intent intent = new Intent(this, TranslucentBarOnKitKat.class);
-        intent.putExtra(TranslucentBarOnKitKat.TYPE, TranslucentBarOnKitKat.TYPE_STYLE);
-        startActivity(intent);
-    }
-
-    public void showTranslucentBarOnLolipopByCode(View v){
-
-    }
-
-    public void showTranslucentBarOnLolipopByStyle(View v) {
-
+    public void showTranslucentBarOnLolipop(View v){
+        startActivity(new Intent(this , TranslucentBarOnLolipop.class));
     }
 
     public void showTranslucentBarOnKitKatDrawer(View v){
-        startActivity(new Intent(this , TranslucentBarOnDrawerLayout.class));
+        startActivity(new Intent(this , TranslucentBarOnKitKatDrawer.class));
     }
 
     public void showTranslucentBarOnLolipopDrawer(View v) {
-
+        startActivity(new Intent(this , TranslucentBarOnLolipopDrawer.class));
     }
-
-
-
 
 
 }

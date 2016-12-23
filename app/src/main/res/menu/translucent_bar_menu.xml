@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <group android:id="@+id/group_tye">
+        <item
+            android:id="@+id/action_type_code"
+            android:title="Code"
+            app:showAsAction="always" />
+        <item
+            android:id="@+id/action_type_style"
+            android:title="Style"
+            app:showAsAction="always" />
+    </group>
+
+
+    <group android:id="@+id/group_methd">
+
+        <item
+            android:id="@+id/action_method_one"
+            android:title="方法一"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_method_two"
+            android:title="方法二"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_method_three"
+            android:title="方法三"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_method_four"
+            android:title="方法四"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_method_five"
+            android:title="方法五"
+            app:showAsAction="never" />
+
+    </group>
+
+</menu>

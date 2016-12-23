@@ -3,8 +3,8 @@ package app.hoocchi.perfectdemo;
 /**
  * Created by st on 2016/11/18.
  */
-public class DataUtils {
-    private DataUtils() {
+public class DataCenter {
+    private DataCenter() {
 
     }
 

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.hoocchi.perfectdemo.translucentbar_demo.TranslucentBarOnKitKat">
+
+    <View
+        android:id="@+id/root_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/root_empty_view"
+        android:background="#123654">
+
+        <View
+            android:id="@+id/content_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_empty_view"
+            android:text="Test Start Location"
+            android:textColor="#ffffff"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@id/content_empty_view"
+            android:background="@android:color/transparent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="TranslucentBar" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/overlay_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/content_view"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. 方式一和方式二是通过对根View进行处理来实现透明状态栏。"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="2.  方式三和方式四是通过对内容View进行处理来实现透明状态栏。"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="3.  方式五是同时对根View、内容View进行处理来实现透明状态栏。"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="测试透明状态栏对键盘输入时的影响"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

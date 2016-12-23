@@ -18,7 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import app.hoocchi.perfectdemo.DataUtils;
+import app.hoocchi.perfectdemo.DataCenter;
 import app.hoocchi.perfectdemo.R;
 
 /**
@@ -103,7 +103,7 @@ public class MaterialDemo3Fragment extends Fragment {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        mRecyclerView.setAdapter(new RecyclerAdapter(DataUtils.mStrArrays));
+        mRecyclerView.setAdapter(new RecyclerAdapter(DataCenter.mStrArrays));
     }
 
     @Override
