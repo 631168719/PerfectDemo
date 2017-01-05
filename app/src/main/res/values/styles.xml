@@ -134,11 +134,4 @@
         <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
 
-    <style name="LolipopDrawerTheme" parent="AppTheme.NoActionBar">
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">#123654</item>
-    </style>
-
-
-
 </resources>

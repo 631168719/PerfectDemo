@@ -66,7 +66,6 @@ public class TranslucentBarOnLolipop extends AppCompatActivity {
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void setTranslucentBarByCode() {
-
         setTheme(R.style.AppTheme_NoActionBar);
 
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
@@ -80,21 +79,20 @@ public class TranslucentBarOnLolipop extends AppCompatActivity {
         getWindow().setStatusBarColor(Color.TRANSPARENT);
         getWindow().setNavigationBarColor(Color.TRANSPARENT);
 
-        setContentView(R.layout.activity_translucent_bar_on_kitkat);
+        setContentView(R.layout.activity_translucent_bar_content);
 
         useMethodByIndex();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void setTranslucentBarByStyle() {
-
         setTheme(R.style.TranslucentOnLolipopTheme);
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
 
-        setContentView(R.layout.activity_translucent_bar_on_kitkat);
+        setContentView(R.layout.activity_translucent_bar_content);
 
         useMethodByIndex();
     }
@@ -197,15 +195,6 @@ public class TranslucentBarOnLolipop extends AppCompatActivity {
         overlayView.setBackgroundColor(Color.WHITE);
     }
 
-    private int getStatusBarHeight(){
-        int id = getResources().getIdentifier("status_bar_height" , "dimen" , "android");
-        if(id > 0){
-            return getResources().getDimensionPixelSize(id);
-        }
-
-        return 0;
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.translucent_bar_menu, menu);
@@ -246,6 +235,15 @@ public class TranslucentBarOnLolipop extends AppCompatActivity {
         overridePendingTransition(0,0);
 
         return true ;
+    }
+
+    private int getStatusBarHeight(){
+        int id = getResources().getIdentifier("status_bar_height" , "dimen" , "android");
+        if(id > 0){
+            return getResources().getDimensionPixelSize(id);
+        }
+
+        return 0;
     }
 
 }

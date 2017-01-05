@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import app.hoocchi.perfectdemo.R;
 
-public class PreferenceActivity2 extends AppCompatActivity {
+public class PreferenceFragmentDemo extends AppCompatActivity {
 
     private Fragment mCurrentFragment = null ;
     private static ActionBar mAb ;
@@ -19,7 +19,7 @@ public class PreferenceActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_preference2);
+        setContentView(R.layout.activity_preference_fragment);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
@@ -88,7 +88,7 @@ public class PreferenceActivity2 extends AppCompatActivity {
             changeTheme.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    PreferenceActivity2 activity = (PreferenceActivity2) getActivity();
+                    PreferenceFragmentDemo activity = (PreferenceFragmentDemo) getActivity();
                     activity.replace(ThemeChangeFragment.newInstance() , "设置主题");
                     return false;
                 }

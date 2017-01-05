@@ -14,7 +14,7 @@ import android.preference.SwitchPreference;
 
 import app.hoocchi.perfectdemo.R;
 
-public class PreferenceActivity1 extends PreferenceActivity {
+public class PreferenceActivityDemo extends PreferenceActivity {
 
     public static final String TYPE = "type";
     public static final int TYPE_XML = 0 ;

@@ -70,7 +70,7 @@ public class TranslucentBarOnKitKat extends AppCompatActivity {
     private void setTranslucentBarByCode(){
         setTheme(R.style.AppTheme_NoActionBar);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        setContentView(R.layout.activity_translucent_bar_on_kitkat);
+        setContentView(R.layout.activity_translucent_bar_content);
         setTranslucentBar();
     }
 
@@ -80,7 +80,7 @@ public class TranslucentBarOnKitKat extends AppCompatActivity {
      */
     private void setTranslucentBarByStyle(){
         setTheme(R.style.TranslucentOnKitKatTheme);
-        setContentView(R.layout.activity_translucent_bar_on_kitkat);
+        setContentView(R.layout.activity_translucent_bar_content);
         setTranslucentBar();
     }
 
@@ -195,17 +195,6 @@ public class TranslucentBarOnKitKat extends AppCompatActivity {
         overlayView.setBackgroundColor(Color.WHITE);
     }
 
-
-    private int getStatusBarHeight(){
-        int id = getResources().getIdentifier("status_bar_height" , "dimen" , "android");
-        if(id > 0){
-            return getResources().getDimensionPixelSize(id);
-        }
-
-        return 0;
-    }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.translucent_bar_menu, menu);
@@ -246,5 +235,14 @@ public class TranslucentBarOnKitKat extends AppCompatActivity {
         overridePendingTransition(0,0);
 
         return true ;
+    }
+
+    private int getStatusBarHeight(){
+        int id = getResources().getIdentifier("status_bar_height" , "dimen" , "android");
+        if(id > 0){
+            return getResources().getDimensionPixelSize(id);
+        }
+
+        return 0;
     }
 }

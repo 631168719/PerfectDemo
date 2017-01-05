@@ -46,17 +46,19 @@
 
         <!-- Preference Demo -->
         <activity android:name=".preference_demo.PreferenceMainActivity" />
-        <activity android:name=".preference_demo.PreferenceActivity1" />
+        <activity android:name=".preference_demo.PreferenceActivityDemo" />
         <activity
-            android:name=".preference_demo.PreferenceActivity2"
+            android:name=".preference_demo.PreferenceFragmentDemo"
             android:theme="@style/AppTheme.NoActionBar" />
+
 
         <!-- TranslucentBar Demo -->
         <activity android:name=".translucentbar_demo.TranslucentBarMainActivity" />
         <activity android:name=".translucentbar_demo.TranslucentBarOnKitKat" />
         <activity android:name=".translucentbar_demo.TranslucentBarOnKitKatDrawer" />
         <activity android:name=".translucentbar_demo.TranslucentBarOnLolipop" />
-        <activity android:name=".translucentbar_demo.TranslucentBarOnLolipopDrawer"/>
+        <activity android:name=".translucentbar_demo.TranslucentBarOnLolipopDrawer" />
+
     </application>
 
 </manifest>

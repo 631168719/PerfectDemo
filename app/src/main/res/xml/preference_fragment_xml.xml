@@ -19,7 +19,7 @@
 
             <intent
                 android:targetPackage="app.hoocchi.perfectdemo"
-                android:targetClass="app.hoocchi.perfectdemo.preference_demo.PreferenceActivity1"/>
+                android:targetClass="app.hoocchi.perfectdemo.preference_demo.PreferenceActivityDemo"/>
 
         </PreferenceScreen>
 

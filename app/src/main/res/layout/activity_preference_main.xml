@@ -10,13 +10,13 @@
 
     <Button
         style="@style/CommonButton"
-        android:onClick="showPreferenceFromXML"
-        android:text="showPreferenceFromXML"/>
+        android:onClick="showPreferenceActivityFromXml"
+        android:text="showPreferenceFromXml"/>
 
     <Button
         style="@style/CommonButton"
-        android:onClick="showPreferenceFromCode"
-        android:text="showPreferenceFromCode"/>
+        android:onClick="showPreferenceActivityFromJava"
+        android:text="showPreferenceFromJava" />
 
     <Button
         style="@style/CommonButton"
