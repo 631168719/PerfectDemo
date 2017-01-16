@@ -5,6 +5,8 @@ import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -65,6 +67,21 @@ public abstract class CommonAdapter<T> extends RecyclerView.Adapter<CommonAdapte
             }
 
             return (T)childView;
+        }
+
+        public void setText(int childId , String text){
+            TextView view = getChildView(childId);
+            view.setText(text);
+        }
+
+        public void setImageResource(int childId , int resId){
+            ImageView view = getChildView(childId);
+            view.setImageResource(resId);
+        }
+
+        public void setIdClickListener(int childId , View.OnClickListener listener){
+            View view = getChildView(childId);
+            view.setOnClickListener(listener);
         }
     }
 }

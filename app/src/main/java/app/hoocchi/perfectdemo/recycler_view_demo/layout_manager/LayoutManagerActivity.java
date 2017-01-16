@@ -1,14 +1,12 @@
-package app.hoocchi.perfectdemo.recycler_view_demo;
+package app.hoocchi.perfectdemo.recycler_view_demo.layout_manager;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,38 +14,32 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Arrays;
-import java.util.Random;
 
+import app.hoocchi.perfectdemo.BaseActivity;
 import app.hoocchi.perfectdemo.DataCenter;
 import app.hoocchi.perfectdemo.DeviceManager;
 import app.hoocchi.perfectdemo.R;
 import app.hoocchi.perfectdemo.recycler_view_demo.adapter.CommonAdapter;
-import app.hoocchi.perfectdemo.recycler_view_demo.decoration.DefaultItemDecoration;
 
-public class LayoutManagerActivity extends AppCompatActivity {
+public class LayoutManagerActivity extends BaseActivity {
 
     private RecyclerView mRecyclerView ;
     private RecyclerView.LayoutManager mLayoutManager;
-    private DefaultItemDecoration mItemDecoration ;
 
     private boolean isReverse ;
     private int mOrientation ;
+
+    private Menu mMenu ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
 
-        initToolBar();
+        setBarTitle("Layout Manager");
 
         initRecyclerView();
 
-    }
-
-    private void initToolBar() {
-        Toolbar toolBar = (Toolbar) findViewById(R.id.tool_bar);
-        toolBar.setTitle("LayoutManager");
-        setSupportActionBar(toolBar);
     }
 
     private void initRecyclerView() {
@@ -57,8 +49,6 @@ public class LayoutManagerActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        mItemDecoration = new DefaultItemDecoration(this , mOrientation);
-        mRecyclerView.addItemDecoration(mItemDecoration);
 
         CommonAdapter<String> adapter = new CommonAdapter<String>(Arrays.asList(DataCenter.mStrArrays)) {
 
@@ -69,7 +59,7 @@ public class LayoutManagerActivity extends AppCompatActivity {
 
             @Override
             protected void convert(ViewHolder holder, String data, int position) {
-                setItemLayoutParams(holder.itemView);
+                setItemLayoutParams(holder.itemView , position);
 
                 TextView mText = holder.getChildView(R.id.item_text);
                 mText.setText(data);
@@ -81,8 +71,10 @@ public class LayoutManagerActivity extends AppCompatActivity {
 
     }
 
-    private void setItemLayoutParams(View itemView){
+    private void setItemLayoutParams(View itemView , int position){
         RecyclerView.LayoutParams lp = (RecyclerView.LayoutParams) itemView.getLayoutParams();
+        int margins = DeviceManager.dpToPx(this , 10);
+        lp.setMargins(margins , margins , margins , margins);
 
         if(mLayoutManager instanceof LinearLayoutManager){
 
@@ -107,16 +99,23 @@ public class LayoutManagerActivity extends AppCompatActivity {
             }
 
         }else if(mLayoutManager instanceof StaggeredGridLayoutManager){
-            int screenWidth = DeviceManager.getScreenWidth(this);
-            int screenHeight = DeviceManager.getScreenHeight(this);
-            Random random = new Random();
 
             if(mOrientation == OrientationHelper.VERTICAL){
-                lp.width = screenWidth / 4 + random.nextInt(screenWidth/4);
-                lp.height = screenHeight/2 + random.nextInt(screenHeight/2);
+                int screenWidth = DeviceManager.getScreenWidth(this);
+                if(position % 2 == 0){
+                    lp.width = screenWidth / 2;
+                }else{
+                    lp.width = screenWidth / 3 ;
+                }
+                lp.height = RecyclerView.LayoutParams.WRAP_CONTENT;
             }else if(mOrientation == OrientationHelper.HORIZONTAL){
-                lp.width = screenWidth / 2 + random.nextInt(screenWidth/2);
-                lp.height = screenHeight/4 + random.nextInt(screenHeight/4);
+                int screenHeight = DeviceManager.getScreenHeight(this);
+                lp.width = RecyclerView.LayoutParams.WRAP_CONTENT;
+                if(position % 2 == 0){
+                    lp.height = screenHeight / 3;
+                }else{
+                    lp.height = screenHeight / 4 ;
+                }
             }
 
         }
@@ -127,7 +126,13 @@ public class LayoutManagerActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.layout_manager_option_menu , menu);
+        mMenu = menu ;
         return true ;
+    }
+
+    private void showHideItem(boolean visible){
+        mMenu.findItem(R.id.action_normal).setVisible(visible);
+        mMenu.findItem(R.id.action_reverse).setVisible(visible);
     }
 
     @Override
@@ -175,7 +180,8 @@ public class LayoutManagerActivity extends AppCompatActivity {
            ((GridLayoutManager)mLayoutManager).setReverseLayout(isReverse);
        }
 
-        mItemDecoration.setOrientation(mOrientation);
+       showHideItem(!(mLayoutManager instanceof StaggeredGridLayoutManager));
+
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         return true ;

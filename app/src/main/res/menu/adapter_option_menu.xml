@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_single_type"
+        android:title="Single Type"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_multi_type"
+        android:title="Multi Type"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_head_foot_type"
+        android:title="Head And Foot Type"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_spinned_type"
+        android:title="Spinned Type"
+        app:showAsAction="never" />
+
+</menu>

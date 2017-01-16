@@ -9,6 +9,11 @@
     tools:context="app.hoocchi.perfectdemo.recycler_view_demo.RecyclerViewMainActivity">
 
     <Button
+        android:id="@+id/common_adapter"
+        style="@style/CommonButton"
+        android:text="Common Adapter"/>
+
+    <Button
         android:id="@+id/layout_manager"
         style="@style/CommonButton"
         android:text="LayoutManager" />
@@ -17,5 +22,6 @@
         android:id="@+id/item_decoration"
         style="@style/CommonButton"
         android:text="ItemDecoration" />
+
 
 </LinearLayout>

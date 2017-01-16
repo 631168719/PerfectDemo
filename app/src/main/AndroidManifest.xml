@@ -61,10 +61,13 @@
         <!-- RecyclerView Demo -->
         <activity android:name=".recycler_view_demo.RecyclerViewMainActivity" />
         <activity
-            android:name=".recycler_view_demo.LayoutManagerActivity"
+            android:name=".recycler_view_demo.layout_manager.LayoutManagerActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".recycler_view_demo.ItemDecorationActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".recycler_view_demo.decoration.ItemDecorationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".recycler_view_demo.adapter.CommonAdapterActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

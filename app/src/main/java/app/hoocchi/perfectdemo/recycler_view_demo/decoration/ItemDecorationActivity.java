@@ -1,4 +1,4 @@
-package app.hoocchi.perfectdemo.recycler_view_demo;
+package app.hoocchi.perfectdemo.recycler_view_demo.decoration;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import app.hoocchi.perfectdemo.DataCenter;
 import app.hoocchi.perfectdemo.R;
 import app.hoocchi.perfectdemo.recycler_view_demo.adapter.CommonAdapter;
-import app.hoocchi.perfectdemo.recycler_view_demo.decoration.CommonItemDecoration;
 
 public class ItemDecorationActivity extends AppCompatActivity {
 
