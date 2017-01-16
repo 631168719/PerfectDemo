@@ -35,7 +35,7 @@ public class CommonAdapterWrapper extends RecyclerView.Adapter<CommonAdapter.Vie
        if(position == 0){
            return mHeaderView == null ? ItemType.NORMAL.ordinal()
                    : ItemType.HEADER.ordinal();
-       }else if(position == mAdapter.getItemCount() + 1){
+       }else if(position == getItemCount() - 1){
            return mFooterView == null ? ItemType.NORMAL.ordinal()
                    : ItemType.FOOTER.ordinal();
        }else {
@@ -56,13 +56,17 @@ public class CommonAdapterWrapper extends RecyclerView.Adapter<CommonAdapter.Vie
 
     @Override
     public void onBindViewHolder(CommonAdapter.ViewHolder holder, int position) {
-       if(position == 0 && mHeaderView != null){
-           return ;
-       }else if(position == mAdapter.getItemCount() + 1){
-           return ;
-       }else {
-           mAdapter.onBindViewHolder(holder , position);
-       }
+        int viewType = getItemViewType(position);
+
+        if(viewType == ItemType.HEADER.ordinal()){
+            return ;
+        }else if(viewType == ItemType.FOOTER.ordinal()){
+            return ;
+        }else{
+            int index = mHeaderView == null ? position : position - 1 ;
+            mAdapter.onBindViewHolder(holder , index);
+        }
+
     }
 
     @Override

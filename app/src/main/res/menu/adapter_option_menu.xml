@@ -14,8 +14,12 @@
 
     <item
         android:id="@+id/action_head_foot_type"
-        android:title="Head And Foot Type"
+        android:title="Header Footer Type"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_empty_type"
+        android:title="Header Footer Type"
+        app:showAsAction="never"/>
 
     <item
         android:id="@+id/action_spinned_type"

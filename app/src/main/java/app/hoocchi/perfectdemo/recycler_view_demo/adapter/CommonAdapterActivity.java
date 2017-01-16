@@ -82,6 +82,8 @@ public class CommonAdapterActivity extends BaseActivity {
                 mWrapperAdapter.setFooterView(getView("FooterView"));
                 mRecyclerView.setAdapter(mWrapperAdapter);
                 break;
+            case R.id.action_empty_type :
+                break;
             case R.id.action_spinned_type:
                 break;
         }
@@ -90,7 +92,7 @@ public class CommonAdapterActivity extends BaseActivity {
     }
 
     private View getView(String text){
-        View view = LayoutInflater.from(this).inflate(R.layout.header_footer_recycler_item , null);
+        View view = LayoutInflater.from(this).inflate(R.layout.header_footer_recycler_item , mRecyclerView , false);
         TextView textView = (TextView) view.findViewById(R.id.header_footer_view);
         textView.setText(text);
 

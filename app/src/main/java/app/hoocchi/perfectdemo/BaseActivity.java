@@ -46,4 +46,5 @@ public abstract class BaseActivity extends AppCompatActivity{
         i.putExtras(data);
         startActivity(i);
     }
+
 }

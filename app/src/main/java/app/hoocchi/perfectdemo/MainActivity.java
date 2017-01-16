@@ -3,6 +3,7 @@ package app.hoocchi.perfectdemo;
 import android.os.Bundle;
 import android.view.View;
 
+import app.hoocchi.perfectdemo.custom_view_demo.CustomViewMainActivity;
 import app.hoocchi.perfectdemo.material_demo.MaterialMainActivity;
 import app.hoocchi.perfectdemo.preference_demo.PreferenceMainActivity;
 import app.hoocchi.perfectdemo.recycler_view_demo.RecyclerViewMainActivity;
@@ -33,6 +34,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.show_recycler_view_demo:
                 jumpActivity(RecyclerViewMainActivity.class);
+                break;
+            case R.id.show_custom_view_demo :
+                jumpActivity(CustomViewMainActivity.class);
                 break;
         }
     }
