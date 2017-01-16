@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_normal"
+        android:title="Normal"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_reverse"
+        android:title="Reverse"
+        app:showAsAction="always" />
+
+    <group >
+
+        <item
+            android:id="@+id/action_vertical_linear"
+            android:title="Vertical LinearLayout"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/action_horizontal_linear"
+            android:title="Horizontal LinearLayout"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/action_vertical_grid"
+            android:title="Vertical GridLayout"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/action_horizontal_grid"
+            android:title="Horizontal GridLayout"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/action_vertical_staggered"
+            android:title="Vertical StaggeredLayout"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/action_horizontal_staggered"
+            android:title="Horizontal StaggeredLayout"
+            app:showAsAction="never" />
+
+    </group>
+
+
+</menu>

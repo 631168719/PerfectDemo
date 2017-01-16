@@ -104,6 +104,13 @@
         <item name="android:src">@drawable/circle_ball_24dp</item>
     </style>
 
+    <style name="CommonButton">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:onClick">jump</item>
+    </style>
+
 
     <!-- Material Demo -->
     <style name="MaterialDemoTheme" parent="AppTheme">
@@ -111,12 +118,6 @@
         <item name="windowNoTitle">true</item>
         <!-- 该属性是为TextInputLayout设置，否则使用CounterMaxLength时会报错 -->
         <item name="textColorError">@color/design_textinput_error_color_light</item>
-    </style>
-
-    <style name="CommonButton">
-        <item name="android:layout_width">200dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:inputType">textCapWords</item>
     </style>
 
 

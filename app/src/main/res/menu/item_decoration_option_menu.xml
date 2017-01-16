@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_default_divider"
+        android:title="Default Divider"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_divider_with_padding"
+        android:title="Default Divider With Padding"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_custom_divider"
+        android:title="Custom Divider Drawable"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_draw_line"
+        android:title="Drawable Divider Line"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_draw_rect"
+        android:title="Drawable Divider Rect"
+        app:showAsAction="never" />
+
+
+</menu>

@@ -16,20 +16,21 @@ public class PreferenceMainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Preference Demo");
     }
 
-    public void showPreferenceActivityFromXml(View v){
-        Intent i = new Intent(this , PreferenceActivityDemo.class) ;
-        i.putExtra(PreferenceActivityDemo.TYPE , PreferenceActivityDemo.TYPE_XML);
-        startActivity(i);
-    }
-
-    public void showPreferenceActivityFromJava(View v) {
-        Intent i = new Intent(this , PreferenceActivityDemo.class) ;
-        i.putExtra(PreferenceActivityDemo.TYPE , PreferenceActivityDemo.TYPE_CODE);
-        startActivity(i);
-    }
-
-    public void showPreferenceFragment(View v){
-        startActivity(new Intent(this , PreferenceFragmentDemo.class));
+    public void jump(View v) {
+        Intent i = new Intent(this, PreferenceActivityDemo.class);
+        switch (v.getId()) {
+            case R.id.xml_preference:
+                i.putExtra(PreferenceActivityDemo.TYPE, PreferenceActivityDemo.TYPE_XML);
+                startActivity(i);
+                break;
+            case R.id.java_preference:
+                i.putExtra(PreferenceActivityDemo.TYPE, PreferenceActivityDemo.TYPE_XML);
+                startActivity(i);
+                break;
+            case R.id.fragment_preference:
+                startActivity(new Intent(this, PreferenceFragmentDemo.class));
+                break;
+        }
     }
 
 }

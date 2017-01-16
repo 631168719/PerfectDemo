@@ -1,4 +1,4 @@
-package app.hoocchi.perfectdemo.translucentbar_demo;
+package app.hoocchi.perfectdemo.translucent_bar_demo;
 
 import android.content.Intent;
 import android.os.Bundle;

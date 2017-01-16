@@ -7,7 +7,7 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".translucentbar_demo.TranslucentBarMainActivity">
+    tools:context=".translucent_bar_demo.TranslucentBarMainActivity">
 
     <Button
         android:layout_width="match_parent"

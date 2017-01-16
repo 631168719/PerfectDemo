@@ -1,16 +1,15 @@
 package app.hoocchi.perfectdemo;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import app.hoocchi.perfectdemo.material_demo.MaterialMainActivity;
 import app.hoocchi.perfectdemo.preference_demo.PreferenceMainActivity;
-import app.hoocchi.perfectdemo.translucentbar_demo.TranslucentBarMainActivity;
+import app.hoocchi.perfectdemo.recycler_view_demo.RecyclerViewMainActivity;
 import app.hoocchi.perfectdemo.transition_demo.TransitionMainActivity;
+import app.hoocchi.perfectdemo.translucent_bar_demo.TranslucentBarMainActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,23 +17,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    private void goActivity(Class cls){
-        Intent i = new Intent(this , cls);
-        startActivity(i);
-    }
-
-    public void showTransitionDemo(View v){
-        goActivity(TransitionMainActivity.class);
-    }
-
-    public void showMaterialDemo(View v){
-        goActivity(MaterialMainActivity.class);
-    }
-
-    public void showPreferenceDemo(View vi){
-        goActivity(PreferenceMainActivity.class);
-
-    }public void showStatusBareDemo(View vi){
-        goActivity(TranslucentBarMainActivity.class);
+    public void jump(View v){
+        switch(v.getId()){
+            case R.id.show_transition_demo :
+                jumpActivity(TransitionMainActivity.class);
+                break;
+            case R.id.show_material_demo:
+                jumpActivity(MaterialMainActivity.class);
+                break;
+            case R.id.show_preference_demo:
+                jumpActivity(PreferenceMainActivity.class);
+                break;
+            case R.id.show_status_bar_demo:
+                jumpActivity(TranslucentBarMainActivity.class);
+                break;
+            case R.id.show_recycler_view_demo:
+                jumpActivity(RecyclerViewMainActivity.class);
+                break;
+        }
     }
 }

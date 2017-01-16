@@ -1,5 +1,7 @@
 package app.hoocchi.perfectdemo;
 
+import android.graphics.Color;
+
 /**
  * Created by st on 2016/11/18.
  */
@@ -24,6 +26,24 @@ public class DataCenter {
      */
     public static String[] mTabTitles = {
             "Tab1" , "Tab2" , "Tab3"
+    };
+
+    /**
+     * 图片的ID数组
+     */
+    public static int [] mImgIds = {
+            R.drawable.a , R.drawable.b , R.drawable.c ,
+            R.drawable.d , R.drawable.e , R.drawable.f ,
+            R.drawable.g , R.drawable.h , R.drawable.i ,
+    };
+
+    /**
+     * 颜色数组
+     */
+    public static int [] mColorArrays = {
+            Color.RED, Color.CYAN, Color.GRAY,
+            Color.GREEN, Color.DKGRAY, Color.MAGENTA,
+            Color.LTGRAY , Color.YELLOW, Color.BLUE,
     };
 
 }

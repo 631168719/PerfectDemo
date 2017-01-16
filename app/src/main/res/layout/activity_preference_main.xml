@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:gravity="center_horizontal"
-              android:orientation="vertical"
-              android:padding="16dp"
-              tools:context="app.hoocchi.perfectdemo.preference_demo.PreferenceMainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="app.hoocchi.perfectdemo.preference_demo.PreferenceMainActivity">
 
     <Button
+        android:id="@+id/xml_preference"
         style="@style/CommonButton"
-        android:onClick="showPreferenceActivityFromXml"
-        android:text="showPreferenceFromXml"/>
+        android:text="showPreferenceFromXml" />
 
     <Button
+        android:id="@+id/java_preference"
         style="@style/CommonButton"
-        android:onClick="showPreferenceActivityFromJava"
         android:text="showPreferenceFromJava" />
 
     <Button
+        android:id="@+id/fragment_preference"
         style="@style/CommonButton"
-        android:onClick="showPreferenceFragment"
-        android:text="showPreferenceFragment"/>
+        android:text="showPreferenceFragment" />
 
 
 </LinearLayout>

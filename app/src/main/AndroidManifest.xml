@@ -51,14 +51,20 @@
             android:name=".preference_demo.PreferenceFragmentDemo"
             android:theme="@style/AppTheme.NoActionBar" />
 
-
         <!-- TranslucentBar Demo -->
-        <activity android:name=".translucentbar_demo.TranslucentBarMainActivity" />
-        <activity android:name=".translucentbar_demo.TranslucentBarOnKitKat" />
-        <activity android:name=".translucentbar_demo.TranslucentBarOnKitKatDrawer" />
-        <activity android:name=".translucentbar_demo.TranslucentBarOnLolipop" />
-        <activity android:name=".translucentbar_demo.TranslucentBarOnLolipopDrawer" />
+        <activity android:name=".translucent_bar_demo.TranslucentBarMainActivity" />
+        <activity android:name=".translucent_bar_demo.TranslucentBarOnKitKat" />
+        <activity android:name=".translucent_bar_demo.TranslucentBarOnKitKatDrawer" />
+        <activity android:name=".translucent_bar_demo.TranslucentBarOnLolipop" />
+        <activity android:name=".translucent_bar_demo.TranslucentBarOnLolipopDrawer" />
 
+        <!-- RecyclerView Demo -->
+        <activity android:name=".recycler_view_demo.RecyclerViewMainActivity" />
+        <activity
+            android:name=".recycler_view_demo.LayoutManagerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".recycler_view_demo.ItemDecorationActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

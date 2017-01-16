@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".translucentbar_demo.TranslucentBarOnKitKatDrawer"
+    tools:context=".translucent_bar_demo.TranslucentBarOnKitKatDrawer"
     tools:openDrawer="start">
 
     <include

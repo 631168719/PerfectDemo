@@ -1,11 +1,9 @@
-package app.hoocchi.perfectdemo.translucentbar_demo;
+package app.hoocchi.perfectdemo.translucent_bar_demo;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -19,17 +17,17 @@ import app.hoocchi.perfectdemo.DialogManager;
 import app.hoocchi.perfectdemo.R;
 import app.hoocchi.perfectdemo.VersionManager;
 
-public class TranslucentBarOnKitKatDrawer extends AppCompatActivity {
-
-    private DrawerLayout mDrawerLayout ;
+public class TranslucentBarOnKitKat extends AppCompatActivity {
 
     private static final String TYPE = "type";
-    private static final String METHOD = "method";
     private static final int TYPE_CODE = 0 ;
     private static final int TYPE_STYLE = 1 ;
 
-    private int type ;
-    private int methodIndex;
+    private static final String METHOD = "method";
+
+
+    private int mType ;
+    private int methodIndex ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,31 +44,47 @@ public class TranslucentBarOnKitKatDrawer extends AppCompatActivity {
             return ;
         }
 
-        type = getIntent().getIntExtra(TYPE , TYPE_CODE);
+        mType = getIntent().getIntExtra(TYPE , TYPE_CODE);
         methodIndex = getIntent().getIntExtra(METHOD , 1);
 
-        setTranslucentBar();
+        if (mType == TYPE_CODE) {
+            setTranslucentBarByCode();
+        } else if (mType == TYPE_STYLE) {
+            setTranslucentBarByStyle();
+        }
 
+
+        //初始化ToolBar
         initToolbar();
+    }
 
+    private void initToolbar() {
+        Toolbar toolBar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolBar);
+    }
+
+
+    /**
+     * 当前Activity需要实现NoActionBar的Theme
+     */
+    private void setTranslucentBarByCode(){
+        setTheme(R.style.AppTheme_NoActionBar);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        setContentView(R.layout.activity_translucent_bar_content);
+        setTranslucentBar();
+    }
+
+    /**
+     * 当前Activity需要实现NoActionBar的Theme，且需要设置如下属性：
+     *  <item name="android:windowTranslucentStatus">true</item>
+     */
+    private void setTranslucentBarByStyle(){
+        setTheme(R.style.TranslucentOnKitKatTheme);
+        setContentView(R.layout.activity_translucent_bar_content);
+        setTranslucentBar();
     }
 
     private void setTranslucentBar(){
-        if (type == TYPE_CODE) {
-            setTheme(R.style.AppTheme_NoActionBar);
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            setContentView(R.layout.activity_translucent_bar_on_drawer);
-        } else if(type == TYPE_STYLE){
-            setTheme(R.style.TranslucentOnKitKatTheme);
-            setContentView(R.layout.activity_translucent_bar_on_drawer);
-        }
-
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-        useMethodByIndex();
-    }
-
-    private void useMethodByIndex(){
         switch(methodIndex){
             case 1 :
                 useMethodOne();
@@ -181,35 +195,9 @@ public class TranslucentBarOnKitKatDrawer extends AppCompatActivity {
         overlayView.setBackgroundColor(Color.WHITE);
     }
 
-    private void initToolbar(){
-        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        setSupportActionBar(toolbar);
-        toolbar.setTitle("DrawerLayout");
-        toolbar.setNavigationIcon(R.drawable.ic_menu);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mDrawerLayout.openDrawer(GravityCompat.START);
-            }
-        });
-    }
-
-    @Override
-    public void onBackPressed() {
-        if(mDrawerLayout.isDrawerOpen(GravityCompat.START)){
-            mDrawerLayout.closeDrawers();
-            return ;
-        }
-        super.onBackPressed();
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.translucent_bar_menu, menu);
-
-        menu.findItem(R.id.action_method_two).setVisible(false);
-        menu.findItem(R.id.action_method_four).setVisible(false);
-        menu.findItem(R.id.action_method_five).setVisible(false);
         return true ;
     }
 
@@ -217,10 +205,10 @@ public class TranslucentBarOnKitKatDrawer extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.action_type_code :
-                type = TYPE_CODE ;
+                mType = TYPE_CODE;
                 break;
             case R.id.action_type_style :
-                type = TYPE_STYLE ;
+                mType = TYPE_STYLE;
                 break;
             case R.id.action_method_one :
                 methodIndex = 1 ;
@@ -239,9 +227,9 @@ public class TranslucentBarOnKitKatDrawer extends AppCompatActivity {
                 break;
         }
 
-        Intent intent = new Intent(this , TranslucentBarOnKitKatDrawer.class);
+        Intent intent = new Intent(this , TranslucentBarOnKitKat.class);
+        intent.putExtra(TYPE , mType);
         intent.putExtra(METHOD , methodIndex);
-        intent.putExtra(TYPE , type);
         startActivity(intent);
         finish();
         overridePendingTransition(0,0);
@@ -257,5 +245,4 @@ public class TranslucentBarOnKitKatDrawer extends AppCompatActivity {
 
         return 0;
     }
-
 }

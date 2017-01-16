@@ -9,23 +9,29 @@
     tools:context="app.hoocchi.perfectdemo.MainActivity">
 
     <Button
+        android:id="@+id/show_transition_demo"
         style="@style/CommonButton"
-        android:text="Transition Demo"
-        android:onClick="showTransitionDemo"/>
+        android:text="Transition Demo" />
 
     <Button
+        android:id="@+id/show_material_demo"
         style="@style/CommonButton"
-        android:text="Material Demo"
-        android:onClick="showMaterialDemo"/>
+        android:text="Material Demo" />
 
     <Button
+        android:id="@+id/show_preference_demo"
         style="@style/CommonButton"
-        android:text="Preference Demo"
-        android:onClick="showPreferenceDemo"/>
+        android:text="Preference Demo"/>
 
     <Button
+        android:id="@+id/show_status_bar_demo"
         style="@style/CommonButton"
-        android:onClick="showStatusBareDemo"
         android:text="StatusBar Demo"/>
+
+    <Button
+        android:id="@+id/show_recycler_view_demo"
+        style="@style/CommonButton"
+        android:text="RecyclerView Demo" />
+
 
 </LinearLayout>
