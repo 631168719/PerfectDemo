@@ -36,7 +36,8 @@
     <Button
         android:id="@+id/show_custom_view_demo"
         style="@style/CommonButton"
-        android:text="CustomView Demo"/>
+        android:text="CustomView Demo"
+        android:visibility="gone"/>
 
 
 </LinearLayout>

@@ -73,7 +73,6 @@
 
         <!-- CustomView Demo-->
         <activity android:name=".custom_view_demo.CustomViewMainActivity"/>
-        <activity android:name=".custom_view_demo.DisplayViewActivity"/>
     </application>
 
 </manifest>

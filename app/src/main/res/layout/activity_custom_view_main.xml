@@ -9,15 +9,6 @@
     android:padding="10dp"
     tools:context="app.hoocchi.perfectdemo.custom_view_demo.CustomViewMainActivity">
 
-    <Button
-        android:id="@+id/basic_graphics"
-        style="@style/CommonButton"
-        android:text="Basic Graphics" />
-
-    <Button
-        android:id="@+id/basic_texts"
-        style="@style/CommonButton"
-        android:text="Basic Texts"/>
 
 
 
